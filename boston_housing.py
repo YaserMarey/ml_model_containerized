@@ -11,12 +11,12 @@ def fit():
     train_x, test_x, train_y, test_y = train_test_split(house.data, house.target, test_size=0.2, random_state=1)
     lr = LinearRegression()
     lr.fit(train_x, train_y)
-    pickle.dump(lr, open('.\models\lr_reg_boston.h5', 'wb'))
+    pickle.dump(lr, open('./models/lr_reg_boston.h5', 'wb'))
     return
 
 
 def predict(x_to_predict):
-    lm_pickled = pickle.load(open(".\models\lr_reg_boston.h5", "rb"))
+    lm_pickled = pickle.load(open("./models/lr_reg_boston.h5", "rb"))
     result = lm_pickled.predict(np.reshape(x_to_predict, (1, -1)))
     return result
 
