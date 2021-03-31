@@ -22,6 +22,6 @@ def predict(x_to_predict):
 
 if __name__ == "__main__":
     fit()
-    house_to_evaluate = [0.62739, 0., 8.14, 0., 0.538, 5.834, 56.5, 4.4986, 4., 307., 21., 395.62, 8.47]
+    house_to_evaluate = [0.62739, 0.0, 8.14, 0.0, 0.538, 5.834, 56.5, 4.4986, 4.0, 307.0, 21.0, 395.62, 8.47]
     price = predict(house_to_evaluate)
     print(f"result of predciton of {house_to_evaluate} is {str(price[0])} 1000s USD")
